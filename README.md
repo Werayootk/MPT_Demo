@@ -1,2 +1,3 @@
 # MPT_Demo
-![](https://github.com/Werayootk/MPT_Demo/blob/werayootk_b1/MPT%20Backend.jpg)
+MONGO_URI = 'mongodb+srv://admin:admin@cluster0.lp6ea.mongodb.net/data?retryWrites=true&w=majority'
+PORT=4000
