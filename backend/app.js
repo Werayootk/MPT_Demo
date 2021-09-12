@@ -28,7 +28,9 @@ const typeDefs = gql`
   }
 
   type Query {
-    dataBy2D(id_2d: String!): [Data]!
+    data: [Data]
+    dataByID(_id: ID!): Data
+    dataBy2D(id_2d: String!): [Data]
   }
 
   type Mutation {
@@ -46,14 +48,25 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    dataBy2D: async (args) => {
+    dataByID: async (root,{_id}) => {
       try {
-        let response = await DataProduct.find({ args }).exec();
-        return response;
+        const query = await DataProduct.findById(_id);
+        return query;
       }catch (e) {
         return e.message;
       }
     },
+    data: async () => {
+      try {
+        const query = await DataProduct.find({});
+        return query;
+      } catch (e) {
+        return e.message;
+      }
+    },
+    dataBy2D: async (root, { id_2d }) => {
+      return await DataProduct.find({ id_2d : id_2d })
+    }
   },
   Mutation: {
     addData: async (_, args) => {
