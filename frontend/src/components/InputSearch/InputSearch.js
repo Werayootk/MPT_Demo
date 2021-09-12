@@ -3,12 +3,13 @@ import "antd/dist/antd.css";
 import "./InputSearch.css";
 import { Input, Space } from "antd";
 
-function OnSearch(value) {
-  console.log(value);
-}
-
 export default function InputSearch(props) {
   const { Search } = Input;
+
+  function OnSearch(value) {
+    console.log(value);
+    props.onSearch(value);
+  }
 
   return (
     <Space direction="vertical" className="InputSearch">

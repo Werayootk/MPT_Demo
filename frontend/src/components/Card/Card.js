@@ -6,7 +6,7 @@ import { Collapse } from "antd";
 const { Panel } = Collapse;
 
 export default function Card(props) {
-  const { id_2d, model_name, line_no, process_no, lot_no, job_reject, create_date } = props.data;
+  const { id_2d, model_name, line_no, process_no, lot_no, job_reject, create_date } = props.item;
 
   return (
     <Collapse className="collapse">
