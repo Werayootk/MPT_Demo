@@ -22,9 +22,8 @@ const GET_2D_DATA = gql`
 export default function OutputSearch(props) {
     const val_2D = props.val;
     const val_2D_Str = val_2D.toString();
-    console.log("Out component: " + val_2D);
     const { loading, error, data } = useQuery(GET_2D_DATA, {
-        variables: val_2D_Str
+        variables: {id_2d : val_2D_Str}
     });
 
   if (loading) return <p><Spin size="large" /></p>;

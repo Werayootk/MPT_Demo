@@ -6,7 +6,7 @@ import { Input, Space } from "antd";
 export default function InputSearch(props) {
   const { Search } = Input;
 
-  function OnSearch(value) {
+  function OnSearchData(value) {
     console.log(value);
     props.onSearch(value);
   }
@@ -18,7 +18,7 @@ export default function InputSearch(props) {
         allowClear
         enterButton="Search"
         size="large"
-        onSearch={OnSearch}
+        onSearch={OnSearchData}
       />
     </Space>
   );
