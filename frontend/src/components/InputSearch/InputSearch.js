@@ -1,24 +1,24 @@
-import React, { Children } from "react";
+import React from "react";
 import "antd/dist/antd.css";
-import './InputSearch.css';
+import "./InputSearch.css";
 import { Input, Space } from "antd";
-import CollapseDetail from './CollapseDetail';
 
+function OnSearch(value) {
+  console.log(value);
+}
 
 export default function InputSearch(props) {
   const { Search } = Input;
-  const onSearch = (value) => console.log(value);
 
   return (
     <Space direction="vertical" className="InputSearch">
       <Search
-        placeholder="input search text"
+        placeholder="input search 2D"
         allowClear
         enterButton="Search"
         size="large"
-        onSearch={onSearch}
-          />
-          <CollapseDetail />
+        onSearch={OnSearch}
+      />
     </Space>
   );
 }

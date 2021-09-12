@@ -1,13 +1,15 @@
 import './App.scss';
-import InputSearch from './components/InputSearch';
+import Header from './components/Header/Header'
+import InputSearch from './components/InputSearch/InputSearch';
+import Footer from './components/Footer/Footer';
+import OutputSearch from './components/OutputSearch/OutputSearch';
 
 function App() {
   return (
     <div className="App">
-      <header className="App_header">
-        <h1>MPT Process Reporting</h1>
-      </header>
+      <Header />
       <InputSearch />
+      <Footer />
     </div>
   );
 }

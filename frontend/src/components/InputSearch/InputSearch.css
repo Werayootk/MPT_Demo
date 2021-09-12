@@ -1,0 +1,7 @@
+.InputSearch {
+    display: flexbox;
+    align-self: center;
+    margin-bottom: 20px;
+    width:350px; 
+    max-width:350px;
+}
