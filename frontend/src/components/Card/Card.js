@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+import "./Card.scss";
 import "antd/dist/antd.css";
 import { Collapse } from "antd";
 

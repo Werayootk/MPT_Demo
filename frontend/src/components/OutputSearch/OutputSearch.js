@@ -1,9 +1,11 @@
 import React from 'react';
-import './OutputSearch.css';
+import './OutputSearch.scss';
 import { Spin } from "antd";
 import gql from 'graphql-tag'; 
 import { useQuery } from "@apollo/react-hooks";
 import Card from '../Card/Card';
+import ErrorImg from '../../assests/error-icon.jpg';
+import WarnImg from '../../assests/warn-icon.jpg';
 
 const GET_2D_DATA = gql`
   query dataBy2D($id_2d: String!) {
@@ -27,7 +29,8 @@ export default function OutputSearch(props) {
     });
 
   if (loading) return <p><Spin size="large" /></p>;
-  if (error) return <p>Error :(</p>; 
+  if (error) return <p className="outputsearch_error"><img src={ErrorImg} alt="Error" width="50px" height="50px" /> Error :( </p>;
+  if (data.dataBy2D.length === 0) return <p className="outputsearch_notfound"><img src={WarnImg} alt="Warning" width="50px" height="50px"/> Not found data.</p>;
 
   return data.dataBy2D.map((item) => (
     <Card
