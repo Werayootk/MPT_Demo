@@ -33,16 +33,18 @@ export default function OutputSearch(props) {
   if (data.dataBy2D.length === 0) return <p className="outputsearch_notfound"><img src={WarnImg} alt="Warning" width="50px" height="50px"/> Not found data.</p>;
 
   return data.dataBy2D.map((item) => (
-    <Card
-    item={{
-      id_2d: item.id_2d,
-      model_name: item.model_name,
-      line_no: item.line_no,
-      process_no: item.process_no,
-      lot_no: item.lot_no,
-      job_reject: item.job_reject,
-      create_date: item.create_date,
-    }}
-    />
+    <div className="outputsearch_center">
+      <Card 
+      item={{
+        id_2d: item.id_2d,
+        model_name: item.model_name,
+        line_no: item.line_no,
+        process_no: item.process_no,
+        lot_no: item.lot_no,
+        job_reject: item.job_reject,
+        create_date: item.create_date,
+      }}
+      />
+    </div>
   ));
 }
