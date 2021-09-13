@@ -1,0 +1,24 @@
+.outputsearch { 
+
+    &_error {
+        background-color: #fee;
+        color: #c33;
+        text-align: center;
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    &_notfound {
+        background-color: #fee;
+        color: rgb(196, 212, 44);
+        text-align: center;
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    &_center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

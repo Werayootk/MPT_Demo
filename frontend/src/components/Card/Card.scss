@@ -1,0 +1,43 @@
+.card {
+  width: 800px;
+  max-width: 800px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+
+  &_header {
+    font-weight: bold;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  &_table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 75%;
+    font-size: medium;
+    
+    th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+      text-align: left;
+    }
+
+    td {
+      font-weight: normal;
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+      text-align: left;
+    }
+
+  }
+
+}
+

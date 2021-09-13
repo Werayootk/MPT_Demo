@@ -1,0 +1,11 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(41,41,41);
+    background: linear-gradient(260deg, rgba(41,41,41,0.9784956218815651) 19%, rgba(233,233,233,1) 100%);  color: black;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+  }
