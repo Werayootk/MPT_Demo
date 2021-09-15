@@ -29,7 +29,7 @@ example for search " 012101011000001, 022102021000002 "
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![](https://github.com/Werayootk/MPT_Demo/blob/develop/images/mpt.gif)
+![](https://github.com/Werayootk/MPT_Demo/blob/main/images/mpt.gif)
 
 This project create for Demo and practice GraphQL skill.
 
